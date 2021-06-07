@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>C3O-Hub</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    form {
+        margin: auto;
+        max-width: 600px
+    }
+
+    form.example input[type=text] {
+        padding: 20px;
+        font-size: 17px;
+        border: 2px solid #808080;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+    }
+
+    form.example input[type=text]:focus {
+        border: 2px solid #8a0e19;
+        outline: none;
+    }
+
+    form.example button {
+        float: left;
+        width: 20%;
+        padding: 20px;
+        background: grey;
+        color: white;
+        font-size: 17px;
+        border: 2px solid grey;
+        border-left: none;
+        cursor: pointer;
+    }
+
+    form.example button:hover {
+        background: #8a0e19;
+        border: 2px solid #8a0e19;
+        border-left: none;
+    }
+
+    /* Clear floats */
+    form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    h1 {
+        text-align: center;
+        color: #C50E1F;
+    }
+
+    .footer {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: grey;
+    }
+</style>
+
+<body>
+<h1>C3O-Hub</h1>
+<h4>Geben Sie in das Suchfeld den Algorithmus ein, dass Sie verwenden möchten..</h4>
+
+<form class="example" action="/submitform" method="POST">
+    <input type="text" placeholder="Suche.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<footer class="footer">
+    <p id="copyright">&copy; 2021 | TU-Berlin | Onur Arslan</p>
+</footer>
+</body>
+</html>

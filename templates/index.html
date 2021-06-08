@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ url_for('static', path='/css/index.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/icons/favicon.png"/>
     <meta charset="UTF-8">
     <title>C3O-Hub</title>
 </head>
@@ -12,10 +13,10 @@
 <h4>Geben Sie in das Suchfeld den Algorithmus ein, dass Sie verwenden möchten..</h4>
 
 <div>
-<form class="example" action="/submitForm" method="POST">
-    <input type="text" placeholder="Suche.." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+    <form class="example" action="/submitForm" method="POST">
+        <input type="text" placeholder="Suche.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 </div>
 
 <footer class="footer">

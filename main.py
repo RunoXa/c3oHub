@@ -12,9 +12,7 @@ def home(request: Request):
 
 
 @app.post("/submitform")
-def handle_form(search: str = Form(...)):
-    print(search)
-
-    return search
-
+def handle_form(request: Request):
+    form_data = request.form()
+    return templates.TemplateResponse("table.html", {"request": request, "formData": "test 123"})
 # uvicorn.run(app)

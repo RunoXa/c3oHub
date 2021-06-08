@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', path='/css/index.css') }}" rel="stylesheet">
     <meta charset="UTF-8">
     <title>C3O-Hub</title>
 </head>
@@ -10,7 +11,15 @@
 <h1>C3O-Hub</h1>
 <h4>Geben Sie in das Suchfeld den Algorithmus ein, dass Sie verwenden möchten..</h4>
 
-{{formData}}
+<div>
+    <form class="example" action="/submitForm" method="POST">
+        <input type="text" placeholder="Suche.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<div>
+    {{formData}}
+</div>
 
 <footer class="footer">
     <p id="copyright">&copy; 2021 | TU-Berlin | Onur Arslan</p>

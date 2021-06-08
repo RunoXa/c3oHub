@@ -1,0 +1,60 @@
+ * {
+        box-sizing: border-box;
+    }
+
+    form {
+        margin: auto;
+        max-width: 600px
+    }
+
+    form.example input[type=text] {
+        padding: 20px;
+        font-size: 17px;
+        border: 2px solid #808080;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+    }
+
+    form.example input[type=text]:focus {
+        border: 2px solid #8a0e19;
+        outline: none;
+    }
+
+    form.example button {
+        float: left;
+        width: 20%;
+        padding: 20px;
+        background: grey;
+        color: white;
+        font-size: 17px;
+        border: 2px solid grey;
+        border-left: none;
+        cursor: pointer;
+    }
+
+    form.example button:hover {
+        background: #8a0e19;
+        border: 2px solid #8a0e19;
+        border-left: none;
+    }
+
+    /* Clear floats */
+    form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    h1 {
+        text-align: center;
+        color: #C50E1F;
+    }
+
+    .footer {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: grey;
+    }

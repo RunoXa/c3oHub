@@ -14,12 +14,12 @@
 
 <div>
     <form class="example" action="/submitForm" method="POST">
-        <input type="text" placeholder="Suche.." name="search">
+        <input type="text" placeholder="Suche.." name="search" required>
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 </div>
 <div>
-    {{formData}}
+    {{ formData }}
 </div>
 
 <footer class="footer">

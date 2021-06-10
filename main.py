@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
@@ -20,8 +20,20 @@ def home(request: Request):
 
 
 @app.post("/submitForm")
-def handle_form(request: Request):
-    form_data = request.form()
-    return templates.TemplateResponse("table.html", {"request": request, "formData": "test 123"})
+def handle_form(request: Request, search: str = Form(...)):
+    data = [
+        {
+            "links": [
+                "github.com/github/test1",
+                "github.com/github/test2",
+                "github.com/github/test3",
+                "github.com/github/test4",
+                "github.com/github/test5"
+            ]
+        }
+    ]
 
+    print(search)
+
+    return templates.TemplateResponse("table.html", {"request": request, "formData": data})
 # uvicorn.run(app)

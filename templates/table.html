@@ -10,20 +10,22 @@
 
 <body>
 <h1>C3O-Hub</h1>
-<h4>Geben Sie in das Suchfeld den Algorithmus ein, dass Sie verwenden möchten..</h4>
+<h2>Suche nach Job-Repositories</h2>
+<h5>Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten..</h5>
 
 <div>
     <form class="example" action="/submitForm" method="POST">
-        <input type="text" placeholder="Suche.." name="search" required>
+        <input type="text" placeholder="Suche.." name="searchJob" required>
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 </div>
-<div>
+
+<div style="margin-top: 25px">
     {{ formData }}
 </div>
 
 <footer class="footer">
-    <p id="copyright">&copy; 2021 | TU-Berlin | Onur Arslan</p>
+    <p id="copyright">&copy; 2021 C3O-Hub | TU-Berlin | Onur Arslan</p>
 </footer>
 </body>
 </html>

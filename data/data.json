@@ -1,0 +1,11 @@
+[
+  {
+    "repositories": [
+      "github.com/github/test1",
+      "github.com/github/test2",
+      "github.com/github/test3",
+      "github.com/github/test4",
+      "github.com/github/test5"
+    ]
+  }
+]

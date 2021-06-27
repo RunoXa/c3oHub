@@ -27,6 +27,6 @@ def handle_form(request: Request, searchJob: str = Form(...)):
 
     # conditions for different searchJobs
     print(searchJob)
-    return templates.TemplateResponse("table.html", {"request": request, "formData": data})
+    return templates.TemplateResponse("table.html", {"request": request, "formData": data, "searchJob": searchJob})
 
 # uvicorn.run(app)

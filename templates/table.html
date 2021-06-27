@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ url_for('static', path='/css/index.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/table.css') }}" rel="stylesheet">
     <link rel="icon" type="image/png" href="/static/icons/favicon.png"/>
     <meta charset="UTF-8">
     <title>C3O-Hub</title>
@@ -15,14 +16,33 @@
 
 <div>
     <form class="example" action="/submitForm" method="POST">
-        <input type="text" placeholder="Suche.." name="searchJob" required>
+        <label>
+            <input type="text" placeholder="Suche.." name="searchJob" value="{{ searchJob }}" required>
+        </label>
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 </div>
 
-<div style="margin-top: 25px">
-    {{ formData }}
+<div class="dataTable">
+    <table>
+        <tr>
+            <th>Repository</th>
+            <th>Menge der Trainingsdaten</th>
+            <th>Vorhersagefehler des Modells</th>
+        </tr>
+        {% for data in formData %}
+        <tr>
+            <td>{{ data.Repository }}</td>
+            <td>{{ data.DataSize }}</td>
+            <td>{{ data.Mape }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
+
+<!--<div>-->
+<!--    {{ formData }}-->
+<!--</div>-->
 
 <footer class="footer">
     <p id="copyright">&copy; 2021 C3O-Hub | TU-Berlin | Onur Arslan</p>

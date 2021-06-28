@@ -1,22 +1,22 @@
 [
   {
-    "Repository": "github.com/github/test1",
+    "Repository": "github.com/github/repoTest1",
     "DataSize": "5000",
-    "Mape": "2.5%"
+    "Mape": "2.5 %"
   },
   {
-    "Repository": "github.com/github/test2",
+    "Repository": "github.com/github/repoTest2",
     "DataSize": "1500",
-    "Mape": "8.2%"
+    "Mape": "8.2 %"
   },
   {
-    "Repository": "github.com/github/test3",
+    "Repository": "github.com/github/repoTest3",
     "DataSize": "1500",
-    "Mape": "10%"
+    "Mape": "10 %"
   },
   {
-    "Repository": "github.com/github/test4",
+    "Repository": "github.com/github/repoTest4",
     "DataSize": "2000",
-    "Mape": "18.5%"
+    "Mape": "18.5 %"
   }
 ]

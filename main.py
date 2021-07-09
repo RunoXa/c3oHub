@@ -22,10 +22,28 @@ def home(request: Request):
 
 @app.post("/submitForm")
 def handle_form(request: Request, searchJob: str = Form(...)):
-    file = open('./data/data.json', )
-    data = json.load(file)
+    data = ''
 
     # conditions for different searchJobs
+    if searchJob.lower().replace(' ', '') == 'sort':
+        file = open('data/sort_job_data.json', )
+        data = json.load(file)
+    elif searchJob.lower().replace(' ', '') == 'grep':
+        file = open('data/grep_job_data.json', )
+        data = json.load(file)
+    elif searchJob.lower().replace(' ', '') == 'kmeans':
+        file = open('data/kmeans_job_data.json', )
+        data = json.load(file)
+    elif searchJob.lower().replace(' ', '') == 'pagerank':
+        file = open('data/pagerank_job_data.json', )
+        data = json.load(file)
+    elif searchJob.lower().replace(' ', '') == 'sgdlr':
+        file = open('data/sgd_job_data.json', )
+        data = json.load(file)
+    else:
+        data = 'Job Not Found!'
+        return templates.TemplateResponse("error.html", {"request": request, "formData": data, "searchJob": searchJob})
+
     print(searchJob)
     return templates.TemplateResponse("table.html", {"request": request, "formData": data, "searchJob": searchJob})
 

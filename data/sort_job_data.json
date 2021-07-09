@@ -1,0 +1,26 @@
+[
+  {
+    "Repository": "github.com/github/sort-repoTest1",
+    "DataSize": "5000",
+    "RepositorySize": "1 GB",
+    "Mape": "2.5 %"
+  },
+  {
+    "Repository": "github.com/github/sort-repoTest2",
+    "DataSize": "1500",
+    "RepositorySize": "2 GB",
+    "Mape": "8.2 %"
+  },
+  {
+    "Repository": "github.com/github/sort-repoTest3",
+    "DataSize": "1500",
+    "RepositorySize": "5 GB",
+    "Mape": "10 %"
+  },
+  {
+    "Repository": "github.com/github/sort-repoTest4",
+    "DataSize": "2000",
+    "RepositorySize": "10 GB",
+    "Mape": "18.5 %"
+  }
+]

@@ -39,7 +39,6 @@ form.example button:hover {
     border: 2px solid #C50E1F;
 }
 
-/* Clear floats */
 form.example::after {
     content: "";
     clear: both;

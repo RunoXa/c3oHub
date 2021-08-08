@@ -1,25 +1,25 @@
 [
   {
     "Repository": "github.com/github/pagerank-repoTest1",
-    "DataSize": "5000",
+    "DataSize": "1000",
     "RepositorySize": "1 GB",
     "Mape": "2.5 %"
   },
   {
     "Repository": "github.com/github/pagerank-repoTest2",
-    "DataSize": "1500",
+    "DataSize": "3000",
     "RepositorySize": "2 GB",
     "Mape": "8.2 %"
   },
   {
     "Repository": "github.com/github/pagerank-repoTest3",
-    "DataSize": "1500",
+    "DataSize": "10000",
     "RepositorySize": "5 GB",
     "Mape": "10 %"
   },
   {
     "Repository": "github.com/github/pagerank-repoTest4",
-    "DataSize": "2000",
+    "DataSize": "20000",
     "RepositorySize": "10 GB",
     "Mape": "18.5 %"
   }

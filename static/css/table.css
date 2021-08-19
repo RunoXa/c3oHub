@@ -6,3 +6,19 @@ table, th, td {
     display: grid;
     margin: 40px 40px 40px 40px;
 }
+
+.successDialog {
+    padding: 10px;
+    background: #008000;
+    color: #ffffff;
+    position: fixed;
+    width: 25%;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.successIcon {
+    float: left;
+    margin-right: 10px;
+}

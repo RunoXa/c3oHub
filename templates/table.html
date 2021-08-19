@@ -46,6 +46,11 @@
     </table>
 </div>
 
+<div id="dialog" class="successDialog">
+    <img class="successIcon" src="../static/icons/success.svg" width="50" alt="SuccessIcon">
+    <p><strong>Github-Link erfolgreich kopiert !</strong></p>
+</div>
+
 <!--<div>-->
 <!--    {{ formData }}-->
 <!--</div>-->
@@ -57,6 +62,9 @@
 </html>
 
 <script>
+    const successDialog = document.getElementById("dialog");
+    successDialog.style.display = "none";
+
     document.querySelectorAll('button[data-type="copy"]')
         .forEach(function (button) {
             button.addEventListener('click', function () {
@@ -74,6 +82,12 @@
                 tmp.select();
                 document.execCommand('copy');
                 document.body.removeChild(tmp);
+
+                // auto close dialog
+                successDialog.style.display = "block";
+                setTimeout(function () {
+                    successDialog.style.display = "none";
+                }, 5000);
             });
         });
 </script>

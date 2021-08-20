@@ -48,7 +48,9 @@
         {% for data in formData %}
         <tr>
             <td data-type="repositoryLink">{{ data.Repository }}
-                <button class="copyButton" data-type="copy"><img src="../static/icons/copy.svg" width="20px" alt="copyButton"/></button>
+                <button class="copyButton" data-type="copy">
+                    <img src="../static/icons/copy.svg" width="20px" alt="copyButton"/>
+                </button>
             </td>
             <td>{{ data.RepositorySize }}</td>
             <td>{{ data.DataSize }}</td>

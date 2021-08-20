@@ -7,6 +7,27 @@ table, th, td {
     margin: 40px 40px 40px 40px;
 }
 
+table, th, td {
+    padding: 6px;
+    text-align: center;
+    border: 4px solid #dddddd;
+    border-collapse: collapse;
+}
+
+.copyButton {
+    padding: 10px;
+    background: #8c8c8c;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.copyButton:hover {
+    background: #C50E1F;
+}
+
 .successDialog {
     padding: 10px;
     background: #008000;

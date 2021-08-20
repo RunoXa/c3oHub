@@ -11,10 +11,22 @@
 </head>
 
 <body>
-<h1>C3O-Hub</h1>
+<section>
+    <div class="header-wrap">
+        <div class="header-left">
+            <button class="headerButton" onclick="window.location.href='/'"><i class="fa fa-home fa-2x"></i></button>
+        </div>
+        <div class="header-center">
+            <h1>C3O-Hub</h1>
+        </div>
+        <div class="header-right"></div>
+    </div>
+</section>
+
 <h2>Suche nach Job-Repositories</h2>
-<h4>Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten.. (Beispiel: KMeans, Sort, Grep, Pagerank,
-    SGDLR)</h4>
+<div class="helpText">Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten.. (Beispiel: KMeans, Sort, Grep,
+    Pagerank, SGDLR)
+</div>
 
 <div>
     <form class="example" action="/submitForm" method="POST">
@@ -36,7 +48,7 @@
         {% for data in formData %}
         <tr>
             <td data-type="repositoryLink">{{ data.Repository }}
-                <button class="copyButton" data-type="copy">Kopieren</button>
+                <button class="copyButton" data-type="copy"><img src="../static/icons/copy.svg" width="20px" alt="copyButton"/></button>
             </td>
             <td>{{ data.RepositorySize }}</td>
             <td>{{ data.DataSize }}</td>

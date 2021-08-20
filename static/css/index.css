@@ -10,7 +10,7 @@ form {
 form.example input[type=text] {
     padding: 20px;
     font-size: 17px;
-    border: 2px solid #808080;
+    border: 2px solid #a6a6a6;
     float: left;
     width: 80%;
     background: #f1f1f1;
@@ -25,10 +25,10 @@ form.example input[type=text]:focus {
 form.example button {
     float: left;
     padding: 15px 18px 15px 18px;
-    background: #8c8c8c;
+    background: #a6a6a6;
     color: white;
     font-size: 22px;
-    border: 2px solid #8c8c8c;
+    border: 2px solid #a6a6a6;
     cursor: pointer;
     border-radius: 50%;
     margin-left: 10px;
@@ -45,9 +45,47 @@ form.example::after {
     display: table;
 }
 
-h1 {
+.helpText {
+    padding-bottom: 20px;
+}
+
+.headerButton {
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #a6a6a6;
+    border-radius: 10px;
+}
+
+.headerButton:hover {
+    background: #C50E1F;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     text-align: center;
+    border-bottom: 3px solid #dddddd;
+}
+
+.header-left {
+    width: 100px;
+    margin-top: 12px;
+}
+
+.header-center {
+}
+
+.header-right {
+    width: 100px;
+}
+
+h1 {
     color: #C50E1F;
+    font-size: xx-large;
 }
 
 .footer {

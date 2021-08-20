@@ -1,5 +1,8 @@
 table, th, td {
-    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+    border: 4px solid #dddddd;
+    border-collapse: collapse;
 }
 
 .dataTable {
@@ -7,16 +10,9 @@ table, th, td {
     margin: 40px 40px 40px 40px;
 }
 
-table, th, td {
-    padding: 6px;
-    text-align: center;
-    border: 4px solid #dddddd;
-    border-collapse: collapse;
-}
-
 .copyButton {
-    padding: 10px;
-    background: #8c8c8c;
+    padding: 6px;
+    background: #a6a6a6;
     color: #ffffff;
     cursor: pointer;
     margin-left: 8px;

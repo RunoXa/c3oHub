@@ -1,26 +1,32 @@
 [
   {
     "Repository": "github.com/github/pagerank-repoTest1",
-    "Repository Größe": "1000",
-    "Menge der Trainingsdaten": "1 GB",
-    "Vorhersagefehler des Modells": "2.5 %"
+    "Menge der Trainingsdaten": "20000",
+    "Repository Größe": "7 GB",
+    "Vorhersagefehler des Modells": "2.3 %"
   },
   {
     "Repository": "github.com/github/pagerank-repoTest2",
-    "Repository Größe": "3000",
-    "Menge der Trainingsdaten": "2 GB",
-    "Vorhersagefehler des Modells": "8.2 %"
+    "Menge der Trainingsdaten": "10000",
+    "Repository Größe": "4 GB",
+    "Vorhersagefehler des Modells": "4.5 %"
   },
   {
     "Repository": "github.com/github/pagerank-repoTest3",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
-    "Vorhersagefehler des Modells": "10 %"
+    "Menge der Trainingsdaten": "4000",
+    "Repository Größe": "3 GB",
+    "Vorhersagefehler des Modells": "7.5 %"
   },
   {
     "Repository": "github.com/github/pagerank-repoTest4",
-    "Repository Größe": "20000",
-    "Menge der Trainingsdaten": "10 GB",
-    "Vorhersagefehler des Modells": "18.5 %"
+    "Menge der Trainingsdaten": "1000",
+    "Repository Größe": "1.8 GB",
+    "Vorhersagefehler des Modells": "9.7 %"
+  },
+    {
+    "Repository": "github.com/github/pagerank-repoTest5",
+    "Menge der Trainingsdaten": "489",
+    "Repository Größe": "0.7 GB",
+    "Vorhersagefehler des Modells": "14.5 %"
   }
 ]

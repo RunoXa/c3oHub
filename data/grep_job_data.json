@@ -1,26 +1,32 @@
 [
   {
     "Repository": "github.com/github/grep-repoTest1",
-    "Repository Größe": "1000",
-    "Menge der Trainingsdaten": "1 GB",
-    "Vorhersagefehler des Modells": "2.5 %"
+    "Menge der Trainingsdaten": "14000",
+    "Repository Größe": "9 GB",
+    "Vorhersagefehler des Modells": "2 %"
   },
   {
     "Repository": "github.com/github/grep-repoTest2",
-    "Repository Größe": "3000",
-    "Menge der Trainingsdaten": "2 GB",
-    "Vorhersagefehler des Modells": "8.2 %"
+    "Menge der Trainingsdaten": "8000",
+    "Repository Größe": "5 GB",
+    "Vorhersagefehler des Modells": "5.2 %"
   },
   {
     "Repository": "github.com/github/grep-repoTest3",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
-    "Vorhersagefehler des Modells": "10 %"
+    "Menge der Trainingsdaten": "3450",
+    "Repository Größe": "2 GB",
+    "Vorhersagefehler des Modells": "8 %"
   },
   {
     "Repository": "github.com/github/grep-repoTest4",
-    "Repository Größe": "20000",
-    "Menge der Trainingsdaten": "10 GB",
-    "Vorhersagefehler des Modells": "18.5 %"
+    "Menge der Trainingsdaten": "890",
+    "Repository Größe": "0.8 GB",
+    "Vorhersagefehler des Modells": "13.4 %"
+  },
+  {
+    "Repository": "github.com/github/grep-repoTest5",
+    "Menge der Trainingsdaten": "230",
+    "Repository Größe": "0.3 GB",
+    "Vorhersagefehler des Modells": "20.8 %"
   }
 ]

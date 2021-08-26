@@ -1,26 +1,32 @@
 [
   {
     "Repository": "github.com/github/sgd-repoTest1",
-    "Repository Größe": "1000",
-    "Menge der Trainingsdaten": "1 GB",
-    "Vorhersagefehler des Modells": "2.5 %"
+    "Menge der Trainingsdaten": "1450",
+    "Repository Größe": "4 GB",
+    "Vorhersagefehler des Modells": "1.9 %"
   },
   {
     "Repository": "github.com/github/sgd-repoTest2",
-    "Repository Größe": "3000",
-    "Menge der Trainingsdaten": "2 GB",
-    "Vorhersagefehler des Modells": "8.2 %"
+    "Menge der Trainingsdaten": "1180",
+    "Repository Größe": "3.4 GB",
+    "Vorhersagefehler des Modells": "2.8 %"
   },
   {
     "Repository": "github.com/github/sgd-repoTest3",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
-    "Vorhersagefehler des Modells": "10 %"
+    "Menge der Trainingsdaten": "878",
+    "Repository Größe": "1.5 GB",
+    "Vorhersagefehler des Modells": "3.7 %"
   },
   {
     "Repository": "github.com/github/sgd-repoTest4",
-    "Repository Größe": "20000",
-    "Menge der Trainingsdaten": "10 GB",
-    "Vorhersagefehler des Modells": "18.5 %"
+    "Menge der Trainingsdaten": "460",
+    "Repository Größe": "0.9 GB",
+    "Vorhersagefehler des Modells": "8.9 %"
+  },
+  {
+    "Repository": "github.com/github/sgd-repoTest5",
+    "Menge der Trainingsdaten": "158",
+    "Repository Größe": "0.15 GB",
+    "Vorhersagefehler des Modells": "19.2 %"
   }
 ]

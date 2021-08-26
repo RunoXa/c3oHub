@@ -1,62 +1,62 @@
 [
   {
     "Repository": "github.com/github/sort-repoTest1",
-    "Repository Größe": "1000",
-    "Menge der Trainingsdaten": "0.5 GB",
+    "Repository Größe": "90000",
+    "Menge der Trainingsdaten": "35 GB",
     "Vorhersagefehler des Modells": "2.5 %"
   },
   {
     "Repository": "github.com/github/sort-repoTest2",
-    "Repository Größe": "1200",
-    "Menge der Trainingsdaten": "0.85 GB",
+    "Repository Größe": "50000",
+    "Menge der Trainingsdaten": "18 GB",
     "Vorhersagefehler des Modells": "2.9 %"
   },
   {
     "Repository": "github.com/github/sort-repoTest3",
-    "Repository Größe": "1450",
-    "Menge der Trainingsdaten": "0.9 GB",
+    "Repository Größe": "25000",
+    "Menge der Trainingsdaten": "9 GB",
     "Vorhersagefehler des Modells": "3 %"
   },
   {
     "Repository": "github.com/github/sort-repoTest4",
-    "Repository Größe": "1850",
-    "Menge der Trainingsdaten": "1 GB",
+    "Repository Größe": "15000",
+    "Menge der Trainingsdaten": "4.8 GB",
     "Vorhersagefehler des Modells": "4.5 %"
   },
   {
     "Repository": "github.com/github/sort-repoTest5",
-    "Repository Größe": "3000",
-    "Menge der Trainingsdaten": "2 GB",
+    "Repository Größe": "8500",
+    "Menge der Trainingsdaten": "2.5 GB",
     "Vorhersagefehler des Modells": "8.2 %"
   },
   {
     "Repository": "github.com/github/sort-repoTest6",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
+    "Repository Größe": "3000",
+    "Menge der Trainingsdaten": "1.5 GB",
     "Vorhersagefehler des Modells": "10 %"
   },
   {
     "Repository": "github.com/github/sort-repoTest7",
-    "Repository Größe": "20000",
-    "Menge der Trainingsdaten": "10 GB",
+    "Repository Größe": "1850",
+    "Menge der Trainingsdaten": "1.1 GB",
     "Vorhersagefehler des Modells": "15.5 %"
   },
     {
     "Repository": "github.com/github/sort-repoTest8",
-    "Repository Größe": "25000",
-    "Menge der Trainingsdaten": "11 GB",
+    "Repository Größe": "1650",
+    "Menge der Trainingsdaten": "0.9 GB",
     "Vorhersagefehler des Modells": "19.5 %"
   },
     {
     "Repository": "github.com/github/sort-repoTest9",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
-    "Vorhersagefehler des Modells": "10 %"
+    "Repository Größe": "500",
+    "Menge der Trainingsdaten": "0.3 GB",
+    "Vorhersagefehler des Modells": "24.6 %"
   },
     {
     "Repository": "github.com/github/sort-repoTestA",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
-    "Vorhersagefehler des Modells": "10 %"
+    "Repository Größe": "150",
+    "Menge der Trainingsdaten": "0.2 GB",
+    "Vorhersagefehler des Modells": "34.9 %"
   }
 ]

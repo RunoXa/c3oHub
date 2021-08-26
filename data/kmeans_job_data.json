@@ -1,26 +1,56 @@
 [
   {
     "Repository": "github.com/github/kmeans-repoTest1",
-    "Repository Größe": "1000",
-    "Menge der Trainingsdaten": "1 GB",
-    "Vorhersagefehler des Modells": "2.5 %"
+    "Menge der Trainingsdaten": "45000",
+    "Repository Größe": "15 GB",
+    "Vorhersagefehler des Modells": "2.1 %"
   },
   {
     "Repository": "github.com/github/kmeans-repoTest2",
-    "Repository Größe": "3000",
-    "Menge der Trainingsdaten": "2 GB",
-    "Vorhersagefehler des Modells": "8.2 %"
+    "Menge der Trainingsdaten": "40000",
+    "Repository Größe": "14 GB",
+    "Vorhersagefehler des Modells": "2.4 %"
   },
   {
     "Repository": "github.com/github/kmeans-repoTest3",
-    "Repository Größe": "10000",
-    "Menge der Trainingsdaten": "5 GB",
-    "Vorhersagefehler des Modells": "10 %"
+    "Menge der Trainingsdaten": "30000",
+    "Repository Größe": "10 GB",
+    "Vorhersagefehler des Modells": "3.5 %"
   },
   {
     "Repository": "github.com/github/kmeans-repoTest4",
-    "Repository Größe": "20000",
-    "Menge der Trainingsdaten": "10 GB",
-    "Vorhersagefehler des Modells": "18.5 %"
+    "Menge der Trainingsdaten": "20000",
+    "Repository Größe": "8 GB",
+    "Vorhersagefehler des Modells": "5.2 %"
+  },
+  {
+    "Repository": "github.com/github/kmeans-repoTest5",
+    "Menge der Trainingsdaten": "13045",
+    "Repository Größe": "6.8 GB",
+    "Vorhersagefehler des Modells": "7.3 %"
+  },
+  {
+    "Repository": "github.com/github/kmeans-repoTest6",
+    "Menge der Trainingsdaten": "8000",
+    "Repository Größe": "3 GB",
+    "Vorhersagefehler des Modells": "9.7 %"
+  },
+  {
+    "Repository": "github.com/github/kmeans-repoTest7",
+    "Menge der Trainingsdaten": "4000",
+    "Repository Größe": "1.4 GB",
+    "Vorhersagefehler des Modells": "12.9 %"
+  },
+  {
+    "Repository": "github.com/github/kmeans-repoTest8",
+    "Menge der Trainingsdaten": "560",
+    "Repository Größe": "0.8 GB",
+    "Vorhersagefehler des Modells": "16.7 %"
+  },
+  {
+    "Repository": "github.com/github/kmeans-repoTest9",
+    "Menge der Trainingsdaten": "240",
+    "Repository Größe": "0.4 GB",
+    "Vorhersagefehler des Modells": "23.9 %"
   }
 ]

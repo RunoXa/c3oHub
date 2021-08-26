@@ -8,35 +8,40 @@
     <title>C3O-Hub</title>
 </head>
 
-<body>
-<section>
-    <div class="header-wrap">
-        <div class="header-left">
-            <button class="headerButton" onclick="window.location.href='/'"><i class="fa fa-home fa-2x"></i></button>
+<div class="container">
+    <body>
+    <section>
+        <div class="header-wrap">
+            <div class="header-left">
+                <button class="headerButton" onclick="window.location.href='/'"><i class="fa fa-home fa-2x"></i>
+                </button>
+            </div>
+            <div class="header-center">
+                <h1>C3O-Hub</h1>
+            </div>
+            <div class="header-right"></div>
         </div>
-        <div class="header-center">
-            <h1>C3O-Hub</h1>
-        </div>
-        <div class="header-right"></div>
+    </section>
+
+    <h2 style="text-align: center">Suche nach Job-Repositories</h2>
+
+    <div class="helpText">Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten.. (Beispiel: KMeans, Sort,
+        Grep,
+        Pagerank, SGDLR)
     </div>
-</section>
 
-<h2>Suche nach Job-Repositories</h2>
+    <div>
+        <form class="example" action="/submitForm" method="POST">
+            <label>
+                <input type="text" placeholder="Suche.." name="searchJob" required>
+            </label>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
 
-<div class="helpText">Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten.. (Beispiel: KMeans, Sort, Grep,
-    Pagerank, SGDLR)
+    <footer class="footer">
+        <p id="copyright">&copy; 2021 C3O-Hub | TU-Berlin</p>
+    </footer>
+    </body>
 </div>
-<div>
-    <form class="example" action="/submitForm" method="POST">
-        <label>
-            <input type="text" placeholder="Suche.." name="searchJob" required>
-        </label>
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-</div>
-
-<footer class="footer">
-    <p id="copyright">&copy; 2021 C3O-Hub | TU-Berlin</p>
-</footer>
-</body>
 </html>

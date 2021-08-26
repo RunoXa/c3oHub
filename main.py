@@ -26,22 +26,22 @@ def handle_form(request: Request, searchJob: str = Form(...)):
 
     # conditions for different searchJobs
     if searchJob.lower().replace(' ', '') == 'sort':
-        file = open('data/sort_job_data.json', )
+        file = open('data/sort_job_data.json')
         data = json.load(file)
     elif searchJob.lower().replace(' ', '') == 'grep':
-        file = open('data/grep_job_data.json', )
+        file = open('data/grep_job_data.json')
         data = json.load(file)
     elif searchJob.lower().replace(' ', '') == 'kmeans':
-        file = open('data/kmeans_job_data.json', )
+        file = open('data/kmeans_job_data.json')
         data = json.load(file)
     elif searchJob.lower().replace(' ', '') == 'pagerank':
-        file = open('data/pagerank_job_data.json', )
+        file = open('data/pagerank_job_data.json')
         data = json.load(file)
     elif searchJob.lower().replace(' ', '') == 'sgdlr':
-        file = open('data/sgd_job_data.json', )
+        file = open('data/sgd_job_data.json')
         data = json.load(file)
     else:
-        data = 'Job Not Found!'
+        data = 'Der gesuchte Job konnte nicht gefunden werden !'
         return templates.TemplateResponse("error.html", {"request": request, "formData": data, "searchJob": searchJob})
 
     print(searchJob)

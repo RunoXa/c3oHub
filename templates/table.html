@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ url_for('static', path='/css/index.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', path='/css/table.css') }}" rel="stylesheet">
@@ -10,98 +11,126 @@
     <title>C3O-Hub</title>
 </head>
 
-<body>
-<section>
-    <div class="header-wrap">
-        <div class="header-left">
-            <button class="headerButton" onclick="window.location.href='/'"><i class="fa fa-home fa-2x"></i></button>
-        </div>
-        <div class="header-center">
-            <h1>C3O-Hub</h1>
-        </div>
-        <div class="header-right"></div>
-    </div>
-</section>
-
-<h2>Suche nach Job-Repositories</h2>
-<div class="helpText">Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten.. (Beispiel: KMeans, Sort, Grep,
-    Pagerank, SGDLR)
-</div>
-
-<div>
-    <form class="example" action="/submitForm" method="POST">
-        <label>
-            <input type="text" placeholder="Suche.." name="searchJob" value="{{ searchJob }}" required>
-        </label>
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-</div>
-
-<div class="dataTable">
-    <table>
-        <tr>
-            <th>Repository</th>
-            <th>Repository Größe</th>
-            <th>Menge der Trainingsdaten</th>
-            <th>Vorhersagefehler des Modells</th>
-        </tr>
-        {% for data in formData %}
-        <tr>
-            <td data-type="repositoryLink">{{ data.Repository }}
-                <button class="copyButton" data-type="copy">
-                    <img src="../static/icons/copy.svg" width="20px" alt="copyButton"/>
+<div class="container">
+    <body onLoad="buildHtmlTable('#resultDataTable')">
+    <section>
+        <div class="header-wrap">
+            <div class="header-left">
+                <button class="headerButton" onclick="window.location.href='/'"><i class="fa fa-home fa-2x"></i>
                 </button>
-            </td>
-            <td>{{ data.RepositorySize }}</td>
-            <td>{{ data.DataSize }}</td>
-            <td>{{ data.Mape }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+            </div>
+            <div class="header-center">
+                <h1>C3O-Hub</h1>
+            </div>
+            <div class="header-right"></div>
+        </div>
+    </section>
+
+    <h2 style="text-align: center">Suche nach Job-Repositories</h2>
+    <div class="helpText">Geben Sie in das Suchfeld den Job ein, dass Sie verwenden möchten.. (Beispiel: KMeans, Sort,
+        Grep,
+        Pagerank, SGDLR)
+    </div>
+
+    <div>
+        <form class="example" action="/submitForm" method="POST">
+            <div>
+            <label>
+                <input type="text" placeholder="Suche.." name="searchJob" value="{{ searchJob }}" required>
+            </label>
+            <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+        </form>
+    </div>
+
+    <div class="dataTable">
+        <table id="resultDataTable"></table>
+    </div>
+
+    <div id="dialog" class="successDialog">
+        <img class="successIcon" src="../static/icons/success.svg" width="50" alt="SuccessIcon">
+        <p><strong>Github-Link erfolgreich kopiert !</strong></p>
+    </div>
+
+    <!--<div>-->
+    <!--    {{ formData }}-->
+    <!--</div>-->
+
+    <footer class="footer">
+        <p id="copyright">&copy; 2021 C3O-Hub | TU-Berlin</p>
+    </footer>
+    </body>
 </div>
-
-<div id="dialog" class="successDialog">
-    <img class="successIcon" src="../static/icons/success.svg" width="50" alt="SuccessIcon">
-    <p><strong>Github-Link erfolgreich kopiert !</strong></p>
-</div>
-
-<!--<div>-->
-<!--    {{ formData }}-->
-<!--</div>-->
-
-<footer class="footer">
-    <p id="copyright">&copy; 2021 C3O-Hub | TU-Berlin</p>
-</footer>
-</body>
 </html>
 
-<script>
-    const successDialog = document.getElementById("dialog");
+<script type="text/javascript">
+    var jsonData = {{formData | safe}}
+
+    // Build html table
+    function buildHtmlTable(selector) {
+        var columns = addAllColumnHeaders(jsonData, selector);
+
+        for (var i = 0; i < jsonData.length; i++) {
+            var row = $('<tr/>');
+            for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                var cellValue = jsonData[i][columns[colIndex]];
+                if (cellValue == null) cellValue = "";
+
+                if (colIndex === 3 && cellValue.substr(0, cellValue.indexOf(' ')) < 5) {
+                    row.addClass('tableRow')
+                }
+
+                if (colIndex === 0) {
+                    row.append($('<td data-type="repositoryLink">').html(cellValue + '<button class="copyButton" data-type="copy" onclick="copyToClipboard(this)"><img src="../static/icons/copy.svg" width="20px" alt="copyButton"/></button>'));
+                } else {
+                    row.append($('<td/>').html(cellValue));
+                }
+            }
+            $(selector).append(row);
+        }
+    }
+
+    // add column Headers of the table
+    function addAllColumnHeaders(jsonData, selector) {
+        var columnSet = [];
+        var headerTr$ = $('<tr/>');
+
+        for (var i = 0; i < jsonData.length; i++) {
+            var rowHash = jsonData[i];
+            for (var key in rowHash) {
+                if ($.inArray(key, columnSet) == -1) {
+                    columnSet.push(key);
+                    headerTr$.append($('<th/>').html(key));
+                }
+            }
+        }
+        $(selector).append(headerTr$);
+
+        return columnSet;
+    }
+
+    var successDialog = document.getElementById("dialog");
     successDialog.style.display = "none";
 
-    document.querySelectorAll('button[data-type="copy"]')
-        .forEach(function (button) {
-            button.addEventListener('click', function () {
-                let repository = this.parentNode.parentNode
-                    .querySelector('td[data-type="repositoryLink"]')
-                    .innerText;
-                repository = repository.substring(0, repository.length - 5);
+    function copyToClipboard(element) {
+        var repositoryLink = element.parentNode.parentNode
+            .querySelector('td[data-type="repositoryLink"]')
+            .innerText
 
-                let tmp = document.createElement('textarea');
-                tmp.value = repository;
-                tmp.setAttribute('readonly', '');
-                tmp.style.position = 'absolute';
-                tmp.style.left = '-9999px';
-                document.body.appendChild(tmp);
-                tmp.select();
-                document.execCommand('copy');
-                document.body.removeChild(tmp);
+        var tmp = document.createElement('textarea');
+        tmp.value = repositoryLink;
+        tmp.setAttribute('readonly', '');
+        tmp.style.position = 'absolute';
+        tmp.style.left = '-9999px';
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand('copy');
+        document.body.removeChild(tmp);
 
-                // auto close dialog
-                successDialog.style.display = "block";
-                setTimeout(function () {
-                    successDialog.style.display = "none";
-                }, 5000);
-            });
-        });
+        // auto close dialog
+        successDialog.style.display = "block";
+        setTimeout(function () {
+            successDialog.style.display = "none";
+        }, 5000);
+    }
 </script>

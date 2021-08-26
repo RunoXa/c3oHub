@@ -46,12 +46,13 @@ form.example::after {
 }
 
 .helpText {
+    text-align: center;
     padding-bottom: 20px;
 }
 
 .headerButton {
     border: none;
-    color: white;
+    color: #ffffff;
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
@@ -88,10 +89,19 @@ h1 {
     font-size: xx-large;
 }
 
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .footer {
+    margin-top: auto;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: grey;
+    color: #808080;
+
 }

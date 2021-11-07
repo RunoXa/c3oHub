@@ -1,7 +1,9 @@
 # C3O-Hub: A website for searching job-repositories - Bachelor thesis - Onur Arslan -  TU-Berlin
 
 - An implemented website to find job-repositories with decision support
-- Implemented with: HTML, CSS, JavaScript (JQuery), UVICORN & JSON
+- Backend: Python >= 3.6 FastAPI-Framework, JSON
+- Fronted: HTML, CSS, JavaScript (JQuery)
+- Server: UVICORN
 
 ## Steps to run the code
 

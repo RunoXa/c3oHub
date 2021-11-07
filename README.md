@@ -1,4 +1,4 @@
-# C3O-Hub: A website for searching job-repositories - Bachelor thesis - Onur Arslan -  TU-Berlin
+# C3O-Hub: A website for searching job-repositories - Bachelor thesis - Onur Arslan - TU-Berlin - Distributed and Operating Systems
 
 - An implemented website to find job-repositories with decision support
 - Backend: Python >= 3.6 FastAPI-Framework, JSON

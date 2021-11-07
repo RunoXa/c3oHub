@@ -22,8 +22,8 @@
 - example: http://127.0.0.1:8000
 
 ## For testing open the interactive API docs
-http://localhost:8000/docs
+- http://localhost:8000/docs
 
 ## URLs
-http://localhost:8000/
-http://localhost:8000/submitForm
+- http://localhost:8000/
+- http://localhost:8000/submitForm
